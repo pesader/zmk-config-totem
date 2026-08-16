@@ -106,7 +106,7 @@
             &kp LS(BSLH)  &kp LS(DLLR)  &kp LS(LBRC)  &kp LS(RBRC)   &txt_assignment    &none  &none  &none  &none  &none
             &kp LS(AMPS)  &kp LS(DQT)   &kp LS(LPAR)  &kp LS(RPAR)   &kp LS(EXCL)       &none  &none  &none  &none  &none
 &caps_word  &kp LS(AT)    &kp LS(PLUS)  &kp LBKT      &kp RBKT       &kp BSLH           &none  &none  &none  &none  &none  &none
-                                        &kp SQT       &kp LS(UNDER)  &kp MINUS          &none  &none  &none
+                                        &kp GRAVE     &kp LS(UNDER)  &kp MINUS          &none  &none  &none
             >;
         };
 
