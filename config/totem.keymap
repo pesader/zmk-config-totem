@@ -23,9 +23,9 @@
 
 / {
     behaviors {
-        hml: homerow_mods_left {
+        hrm: home_row_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT";
+            label = "HOME_ROW_MODS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -33,20 +33,7 @@
             quick-tap-ms = <250>;
             require-prior-idle-ms = <50>;
             flavor = "balanced";
-            retro-tap;
-        };
-
-        hmr: homerow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <50>;
-            flavor = "balanced";
-            retro-tap;
+            hold-trigger-on-release;
         };
     };
 
@@ -99,9 +86,9 @@
 
         base {
             bindings = <
-                &kp Q        &kp W            &kp E         &kp R              &kp T        &kp Y        &kp U              &kp I         &kp O            &kp P
-                &hml LGUI A  &hml LEFT_ALT S  &hml LCTRL D  &hml LEFT_SHIFT F  &kp G        &kp H        &hmr LEFT_SHIFT J  &hmr LCTRL K  &hmr LEFT_ALT L  &hmr LGUI SEMI
-&sk LEFT_SHIFT  &kp Z        &kp X            &kp C         &kp V              &kp B        &kp N        &kp M              &kp COMMA     &kp DOT          &kp FSLH        &sl 7
+                &kp Q        &kp W            &kp E         &kp R              &kp T        &kp Y        &kp U              &kp I                &kp O            &kp P
+                &hrm LGUI A  &hrm LEFT_ALT S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G        &kp H        &hrm LEFT_SHIFT J  &hrm LEFT_CONTROL K  &hrm LEFT_ALT L  &hrm LGUI SLASH
+&sk LEFT_SHIFT  &kp Z        &kp X            &kp C         &kp V              &kp B        &kp N        &kp M              &kp COMMA            &kp DOT          &kp INTERNATIONAL_1  &sl 7
                                               &lt 5 ESC     &lt 1 SPACE        &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE    &lt 6 DELETE
             >;
         };
@@ -109,7 +96,7 @@
         navigation {
             bindings = <
                 &none           &none                  &none                        &none                &none    &os_focus_notification  &kp LC(MINUS)   &kp LC(LS(EQUAL))  &kp LC(EQUAL)    &kp LC(N0)
-                &hml HOME LGUI  &hml PAGE_UP LEFT_ALT  &hml PAGE_DOWN LEFT_CONTROL  &hml END LEFT_SHIFT  &none    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &kp PRINTSCREEN
+                &hrm HOME LGUI  &hrm PAGE_UP LEFT_ALT  &hrm PAGE_DOWN LEFT_CONTROL  &hrm END LEFT_SHIFT  &none    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &kp PRINTSCREEN
 &studio_unlock  &none           &none                  &none                        &none                &none    &kp CAPSLOCK            &kp F2          &kp F6             &kp F7           &kp F11          &os_end_session
                                                        &none                        &none                &none    &none                   &kp K_MENU      &os_lock_screen
             >;
@@ -117,10 +104,10 @@
 
         symbols {
             bindings = <
-            &kp LS(BSLH)  &kp LS(DLLR)  &kp LS(LBRC)  &kp LS(RBRC)   &txt_assignment    &none  &none                  &none                     &none                 &none
-            &kp LS(AMPS)  &kp LS(DQT)   &kp LS(LPAR)  &kp LS(RPAR)   &kp LS(EXCL)       &none  &hmr LEFT_SHIFT EQUAL  &hmr LEFT_CONTROL LS(N5)  &hmr LEFT_ALT LS(N3)  &hmr LGUI LS(N8)
-&caps_word  &kp LS(AT)    &kp LS(PLUS)  &kp LBKT      &kp RBKT       &kp BSLH           &none  &none                  &none                     &none                 &none             &none
-                                        &kp SQT       &kp LS(UNDER)  &kp MINUS          &none  &none                  &none
+            &kp LS(BSLH)  &kp LS(DLLR)  &kp LS(LBRC)  &kp LS(RBRC)   &txt_assignment    &none  &none  &none  &none  &none
+            &kp LS(AMPS)  &kp LS(DQT)   &kp LS(LPAR)  &kp LS(RPAR)   &kp LS(EXCL)       &none  &none  &none  &none  &none
+&caps_word  &kp LS(AT)    &kp LS(PLUS)  &kp LBKT      &kp RBKT       &kp BSLH           &none  &none  &none  &none  &none  &none
+                                        &kp SQT       &kp LS(UNDER)  &kp MINUS          &none  &none  &none
             >;
         };
 
