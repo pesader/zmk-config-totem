@@ -120,10 +120,10 @@
 
         symbols {
             bindings = <
-            &kp PT_PIPE                &kp PT_DOLLAR         &kp PT_LEFT_BRACE                   &kp PT_RIGHT_BRACE    &txt_assignment    &none  &none                    &none                        &none                 &none
-            &hrm LEFT_GUI PT_AMPERSAND &hrm LEFT_ALT PT_DQT  &hrm LEFT_CONTROL PT_LPAREN &hrm LEFT_SHIFT PT_RPAREN     &kp PT_EXCL        &none  &hrm LEFT_SHIFT PT_EQUAL &hrm LEFT_CONTROL PT_PERCENT &hrm LEFT_ALT PT_HASH &hrm LEFT_GUI PT_ASTERISK
-&caps_word  &kp PT_AT                  &kp PT_PLUS           &kp PT_LEFT_BRACKET                 &kp PT_RIGHT_BRACKET  &kp PT_BACKSLASH   &none  &none                    &none                        &none                 &none                   &none
-                                                             &kp PT_GRAVE                        &kp PT_UNDERSCORE     &kp PT_MINUS       &none  &none                    &none
+            &kp PT_PIPE                &kp PT_DOLLAR            &kp PT_LEFT_BRACE                   &kp PT_RIGHT_BRACE                 &txt_assignment    &none  &none                    &none                        &none                 &none
+            &hrm LEFT_GUI PT_AMPERSAND &hrm LEFT_ALT PT_TILDE   &hrm LEFT_CONTROL PT_LEFT_PARENTHESIS &hrm LEFT_SHIFT PT_RIGHT_PARENTHESIS &kp PT_EXCL        &none  &hrm LEFT_SHIFT PT_EQUAL &hrm LEFT_CONTROL PT_PERCENT &hrm LEFT_ALT PT_HASH &hrm LEFT_GUI PT_ASTERISK
+&caps_word  &kp PT_AT                  &kp PT_PLUS              &kp PT_LEFT_BRACKET                 &kp PT_RIGHT_BRACKET               &kp PT_BACKSLASH   &none  &none                    &none                        &none                 &none                   &none
+                                                            &kp PT_GRAVE                        &kp PT_UNDERSCORE                  &kp PT_MINUS       &none  &none                    &none
             >;
         };
 
