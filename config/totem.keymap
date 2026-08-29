@@ -21,6 +21,8 @@
     require-prior-idle-ms = <50>;
 };
 
+&sk { quick-release; };
+
 / {
     behaviors {
         hrm: home_row_mods {
