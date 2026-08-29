@@ -13,6 +13,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <locale/keys_pt_abnt2.h>
 
 &lt {
     flavor = "balanced";
