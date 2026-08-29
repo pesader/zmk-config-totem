@@ -103,8 +103,8 @@
         base {
             bindings = <
                 &kp PT_Q        &kp PT_W            &kp PT_E         &kp PT_R              &kp PT_T        &kp PT_Y        &kp PT_U              &kp PT_I                &kp PT_O            &kp PT_P
-                &hrm LGUI PT_A  &hrm LEFT_ALT PT_S  &hrm LCTRL PT_D  &hrm LEFT_SHIFT PT_F  &kp PT_G        &kp PT_H        &hrm LEFT_SHIFT PT_J  &hrm LEFT_CONTROL PT_K  &hrm LEFT_ALT PT_L  &hrm LGUI PT_SEMICOLON
-&sk LEFT_SHIFT  &kp PT_Z        &kp PT_X            &kp PT_C         &kp PT_V              &kp PT_B        &kp PT_N        &kp PT_M              &kp PT_COMMA            &kp PT_DOT          &kp PT_SLASH  &sl 7
+                &hrm LGUI PT_A  &hrm LEFT_ALT PT_S  &hrm LCTRL PT_D  &hrm LEFT_SHIFT PT_F  &kp PT_G        &kp PT_H        &hrm LEFT_SHIFT PT_J  &hrm LEFT_CONTROL PT_K  &hrm LEFT_ALT PT_L  &hrm LGUI PT_SEMI
+&sk LEFT_SHIFT  &kp PT_Z        &kp PT_X            &kp PT_C         &kp PT_V              &kp PT_B        &kp PT_N        &kp PT_M              &kp PT_COMMA            &kp PT_DOT          &kp PT_FSLH        &sl 7
                                               &lt 5 ESC     &lt 1 PT_SPACE        &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE    &lt 6 DELETE
             >;
         };
@@ -120,17 +120,17 @@
 
         symbols {
             bindings = <
-            &kp PT_PIPE                &kp PT_DOLLAR            &kp PT_LEFT_BRACE                   &kp PT_RIGHT_BRACE                 &txt_assignment    &none  &none                    &none                        &none                 &none
-            &hrm LEFT_GUI PT_AMPERSAND &hrm LEFT_ALT PT_DQT   &hrm LEFT_CONTROL PT_LEFT_PARENTHESIS &hrm LEFT_SHIFT PT_RIGHT_PARENTHESIS &kp PT_EXCL        &none  &hrm LEFT_SHIFT PT_EQUAL &hrm LEFT_CONTROL PT_PERCENT &hrm LEFT_ALT PT_HASH &hrm LEFT_GUI PT_ASTERISK
-&caps_word  &kp PT_AT                  &kp PT_PLUS              &kp PT_LEFT_BRACKET                 &kp PT_RIGHT_BRACKET               &kp PT_BACKSLASH   &none  &none                    &none                        &none                 &none                   &none
-                                                            &kp PT_GRAVE                        &kp PT_UNDERSCORE                  &kp PT_MINUS       &none  &none                    &none
+            &kp PT_PIPE                &kp PT_DLLR              &kp PT_LBRC                 &kp PT_RBRC                &txt_assignment    &none  &none                    &none                        &none                 &none
+            &hrm LEFT_GUI PT_AMPS      &hrm LEFT_ALT PT_DQT     &hrm LEFT_CONTROL PT_LPAR   &hrm LEFT_SHIFT PT_RPAR    &kp PT_EXCL        &none  &hrm LEFT_SHIFT PT_EQUAL &hrm LEFT_CONTROL PT_PRCNT   &hrm LEFT_ALT PT_HASH &hrm LEFT_GUI PT_STAR
+&caps_word  &kp PT_AT                  &kp PT_PLUS              &kp PT_LBKT                 &kp PT_RBKT                &kp PT_BSLH        &none  &none                    &none                        &none                 &none                  &none
+                                                                &kp PT_GRAVE                &kp PT_UNDER               &kp PT_MINUS       &none  &none                    &none
             >;
         };
 
         numbers {
             bindings = <
-       &none                        &none                     &none                      &none                   &none    &kp PT_DOLLAR   &kp PT_N1                 &kp PT_N2                   &kp PT_N3               &kp PT_UNDERSCORE
-       &hrm LEFT_GUI PT_SLASH       &hrm LEFT_ALT PT_ASTERISK &hrm LEFT_CONTROL PT_MINUS &hrm LEFT_SHIFT PT_PLUS &none    &kp PT_PERCENT  &hrm LEFT_SHIFT PT_N4     &hrm LEFT_CONTROL PT_N5     &hrm LEFT_ALT PT_N6     &hrm LEFT_GUI PT_DOT
+       &none                        &none                     &none                      &none                   &none    &kp PT_DLLR     &kp PT_N1                 &kp PT_N2                   &kp PT_N3               &kp PT_UNDER
+       &hrm LEFT_GUI PT_FSLH        &hrm LEFT_ALT PT_STAR     &hrm LEFT_CONTROL PT_MINUS &hrm LEFT_SHIFT PT_PLUS &none    &kp PT_PRCNT    &hrm LEFT_SHIFT PT_N4     &hrm LEFT_CONTROL PT_N5     &hrm LEFT_ALT PT_N6     &hrm LEFT_GUI PT_DOT
 &none  &none                        &none                     &none                      &none                   &none    &none           &kp PT_N7                 &kp PT_N8                   &kp PT_N9               &kp PT_COMMA          &none
                                                               &none                      &none                   &none    &kp PT_EQUAL    &kp PT_N0                 &none
             >;
