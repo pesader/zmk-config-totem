@@ -26,18 +26,6 @@
 
 / {
     behaviors {
-        hrm: homerow_mod {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <50>;
-            flavor = "balanced";
-        };
-
         shift_bspc_del: shift_bspc_del {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_BSPC_DEL";
@@ -138,21 +126,21 @@
         txt_assignment: txt_assignment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp EQUAL &kp SPACE>;
+            bindings = <&kp PT_SPACE &kp PT_EQUAL &kp PT_SPACE>;
             label = "TXT_ASSIGNMENT";
         };
 
         txt_equals: txt_equals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp EQUAL &kp EQUAL &kp SPACE>;
+            bindings = <&kp PT_SPACE &kp PT_EQUAL &kp PT_EQUAL &kp PT_SPACE>;
             label = "TXT_EQUALS";
         };
 
         txt_nequals: txt_nequals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp EXCL &kp EQUAL &kp SPACE>;
+            bindings = <&kp PT_SPACE &kp PT_EXCL &kp PT_EQUAL &kp PT_SPACE>;
             label = "TXT_NEQUALS";
         };
     };
@@ -176,37 +164,37 @@
 
         base {
             bindings = <
-                &kp Q        &kp W            &kp E         &kp R              &kp T        &kp Y        &kp U              &kp I                &kp O            &kp P
-                &hrm LGUI A  &hrm LEFT_ALT S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G        &kp H        &hrm LEFT_SHIFT J  &hrm LEFT_CONTROL K  &hrm LEFT_ALT L  &hrm LGUI PT_SEMI
-&sk LEFT_SHIFT  &kp Z        &kp X            &kp C         &kp V              &kp B        &kp N        &kp M              &kp COMMA            &kp DOT          &kp PT_FSLH        &sl 7
-                                                    &lt 5 ESC        &lt 1 SPACE        &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE       &lt 6 DELETE
+                &kp Q          &kp W              &kp E            &kp R                &kp T        &kp Y        &kp U                &kp I                  &kp O              &kp P
+                &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D   &hrm_l LEFT_SHIFT F  &kp G        &kp H        &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
+&sk LEFT_SHIFT  &kp Z          &kp X              &kp C            &kp V                &kp B        &kp N        &kp M                &kp COMMA              &kp DOT            &kp PT_FSLH          &sl 7
+                                                  &lt 5 ESC        &lt 1 PT_SPACE       &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE      &lt 6 DELETE
             >;
         };
 
         navigation {
             bindings = <
-                &none               &none                  &none                        &none                &none    &os_focus_notification  &kp LC(MINUS)         &kp LC(LS(EQUAL))     &kp LC(EQUAL)        &kp LC(N0)
-                &hrm LEFT_GUI HOME  &hrm LEFT_ALT PAGE_UP  &hrm LEFT_CONTROL PAGE_DOWN  &hrm LEFT_SHIFT END  &none    &kp LEFT_ARROW          &hrm LEFT_SHIFT DOWN  &hrm LEFT_CONTROL UP  &hrm LEFT_ALT RIGHT  &hrm LEFT_GUI PRINTSCREEN
-&studio_unlock  &none               &none                  &none                        &none                &none    &kp CAPSLOCK            &kp F2                &kp F6                &kp F7               &kp F11                    &os_end_session
-                                                           &none                        &none                &none    &none                   &kp K_MENU            &os_lock_screen
+                &none                 &none                    &none                          &none                  &none    &os_focus_notification  &kp LC(MINUS)           &kp LC(LS(EQUAL))       &kp LC(EQUAL)          &kp LC(N0)
+                &hrm_l LEFT_GUI HOME  &hrm_l LEFT_ALT PAGE_UP  &hrm_l LEFT_CONTROL PAGE_DOWN  &hrm_l LEFT_SHIFT END  &none    &kp LEFT_ARROW          &hrm_r LEFT_SHIFT DOWN  &hrm_r LEFT_CONTROL UP  &hrm_r LEFT_ALT RIGHT  &hrm_r LEFT_GUI PRINTSCREEN
+&studio_unlock  &none                 &none                    &none                          &none                  &none    &kp CAPSLOCK            &kp F2                  &kp F6                  &kp F7                 &kp F11                      &os_end_session
+                                                               &none                          &none                  &none    &none                   &kp K_MENU              &os_lock_screen
             >;
         };
 
         symbols {
             bindings = <
-            &kp PT_PIPE            &kp DLLR              &kp PT_LBRC                &kp PT_RBRC              &txt_assignment    &none  &none                     &none                       &none                  &none
-            &hrm LEFT_GUI AMPS     &hrm LEFT_ALT PT_DQT  &hrm LEFT_CONTROL LPAR     &hrm LEFT_SHIFT RPAR     &kp EXCL           &none  &hrm LEFT_SHIFT EQUAL     &hrm LEFT_CONTROL PRCNT     &hrm LEFT_ALT HASH     &hrm LEFT_GUI STAR
-&caps_word  &kp AT                 &kp PLUS              &kp PT_LBKT                &kp PT_RBKT              &kp PT_BSLH        &none  &none                     &none                       &none                  &none                  &none
-                                                         &kp PT_SQT                 &kp UNDER                &kp MINUS          &none  &none                     &none
+            &kp PT_PIPE              &kp DLLR                &kp PT_LBRC                  &kp PT_RBRC                &txt_assignment    &none  &none                       &none                         &none                    &none
+            &hrm_l LEFT_GUI AMPS     &hrm_l LEFT_ALT PT_DQT  &hrm_l LEFT_CONTROL LPAR     &hrm_l LEFT_SHIFT RPAR     &kp EXCL           &none  &hrm_r LEFT_SHIFT EQUAL     &hrm_r LEFT_CONTROL PRCNT     &hrm_r LEFT_ALT HASH     &hrm_r LEFT_GUI STAR
+&caps_word  &kp AT                   &kp PLUS                &kp PT_LBKT                  &kp PT_RBKT                &kp PT_BSLH        &none  &none                       &none                         &none                    &none                  &none
+                                                             &kp PT_SQT                   &kp UNDER                  &kp MINUS          &none  &none                       &none
             >;
         };
 
         numbers {
             bindings = <
-       &none                  &none                  &none                       &none                    &none    &kp DLLR      &kp N1                 &kp N2                   &kp N3               &kp UNDER
-       &hrm LEFT_GUI PT_FSLH  &hrm LEFT_ALT STAR     &hrm LEFT_CONTROL MINUS     &hrm LEFT_SHIFT PLUS     &none    &kp PRCNT     &hrm LEFT_SHIFT N4     &hrm LEFT_CONTROL N5     &hrm LEFT_ALT N6     &hrm LEFT_GUI DOT
-&none  &none                  &none                  &none                       &none                    &none    &none         &kp N7                 &kp N8                   &kp N9               &kp COMMA             &none
-                                                     &none                       &none                    &none    &kp EQUAL     &kp N0                 &none
+       &none                    &none                    &none                       &none                      &none    &kp DLLR      &kp N1                   &kp N2                     &kp N3                 &kp UNDER
+       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR     &hrm_l LEFT_CONTROL MINUS   &hrm_l LEFT_SHIFT PLUS     &none    &kp PRCNT     &hrm_r LEFT_SHIFT N4     &hrm_r LEFT_CONTROL N5     &hrm_r LEFT_ALT N6     &hrm_r LEFT_GUI DOT
+&none  &none                    &none                    &none                       &none                      &none    &none         &kp N7                   &kp N8                     &kp N9                 &kp COMMA             &none
+                                                         &none                       &none                      &none    &kp EQUAL     &kp N0                   &none
             >;
         };
 
