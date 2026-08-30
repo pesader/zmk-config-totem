@@ -197,7 +197,7 @@
             &kp PT_PIPE            &kp DLLR              &kp PT_LBRC                &kp PT_RBRC              &txt_assignment    &none  &none                     &none                       &none                  &none
             &hrm LEFT_GUI AMPS     &hrm LEFT_ALT PT_DQT  &hrm LEFT_CONTROL LPAR     &hrm LEFT_SHIFT RPAR     &kp EXCL           &none  &hrm LEFT_SHIFT EQUAL     &hrm LEFT_CONTROL PRCNT     &hrm LEFT_ALT HASH     &hrm LEFT_GUI STAR
 &caps_word  &kp AT                 &kp PLUS              &kp PT_LBKT                &kp PT_RBKT              &kp PT_BSLH        &none  &none                     &none                       &none                  &none                  &none
-                                                         &kp PT_GRAVE               &kp UNDER                &kp MINUS          &none  &none                     &none
+                                                         &kp PT_SQT                 &kp UNDER                &kp MINUS          &none  &none                     &none
             >;
         };
 
