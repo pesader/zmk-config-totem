@@ -32,7 +32,7 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         lt_bspc_r: lt_bspc_r {
@@ -164,10 +164,10 @@
 
         base {
             bindings = <
-                &kp Q          &kp W              &kp E            &kp R                &kp T        &kp Y        &kp U                &kp I                  &kp O              &kp P
-                &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D   &hrm_l LEFT_SHIFT F  &kp G        &kp H        &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
-&sk LEFT_SHIFT  &kp Z          &kp X              &kp C            &kp V                &kp B        &kp N        &kp M                &kp COMMA              &kp DOT            &kp PT_FSLH          &sl 7
-                                                  &lt 5 ESC        &lt 1 PT_SPACE       &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE      &lt_bspc_r 6 0
+                &kp Q          &kp W              &kp E           &kp R                &kp T        &kp Y        &kp U                &kp I                  &kp O              &kp P
+                &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &kp G        &kp H        &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
+&sk LEFT_SHIFT  &kp Z          &kp X              &kp C           &kp V                &kp B        &kp N        &kp M                &kp COMMA              &kp DOT            &kp PT_FSLH          &sl 7
+                                                  &lt 5 ESC       &lt 1 PT_SPACE       &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE      &lt_bspc_r 6 0
             >;
         };
 
@@ -182,19 +182,19 @@
 
         symbols {
             bindings = <
-            &kp PT_PIPE              &kp DLLR                &kp PT_LBRC                  &kp PT_RBRC                &txt_assignment    &none  &none                       &none                         &none                    &none
-            &hrm_l LEFT_GUI AMPS     &hrm_l LEFT_ALT PT_DQT  &hrm_l LEFT_CONTROL LPAR     &hrm_l LEFT_SHIFT RPAR     &kp EXCL           &none  &hrm_r LEFT_SHIFT EQUAL     &hrm_r LEFT_CONTROL PRCNT     &hrm_r LEFT_ALT HASH     &hrm_r LEFT_GUI STAR
-&caps_word  &kp AT                   &kp PLUS                &kp PT_LBKT                  &kp PT_RBKT                &kp PT_BSLH        &none  &none                       &none                         &none                    &none                  &none
-                                                             &kp PT_SQT                   &kp UNDER                  &kp MINUS          &none  &none                       &none
+            &kp PT_PIPE           &kp DLLR                &kp PT_LBRC               &kp PT_RBRC             &txt_assignment    &none  &none                    &none                      &none                 &none
+            &hrm_l LEFT_GUI AMPS  &hrm_l LEFT_ALT PT_DQT  &hrm_l LEFT_CONTROL LPAR  &hrm_l LEFT_SHIFT RPAR  &kp EXCL           &none  &hrm_r LEFT_SHIFT EQUAL  &hrm_r LEFT_CONTROL PRCNT  &hrm_r LEFT_ALT HASH  &hrm_r LEFT_GUI STAR
+&caps_word  &kp AT                &kp PLUS                &kp PT_LBKT               &kp PT_RBKT             &kp PT_BSLH        &none  &none                    &none                      &none                 &none                 &none
+                                                          &kp PT_SQT                &kp UNDER               &kp MINUS          &none  &none                    &none
             >;
         };
 
         numbers {
             bindings = <
-       &none                    &none                    &none                       &none                      &none    &kp DLLR      &kp N1                   &kp N2                     &kp N3                 &kp UNDER
-       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR     &hrm_l LEFT_CONTROL MINUS   &hrm_l LEFT_SHIFT PLUS     &none    &kp PRCNT     &hrm_r LEFT_SHIFT N4     &hrm_r LEFT_CONTROL N5     &hrm_r LEFT_ALT N6     &hrm_r LEFT_GUI DOT
-&none  &none                    &none                    &none                       &none                      &none    &none         &kp N7                   &kp N8                     &kp N9                 &kp COMMA             &none
-                                                         &none                       &none                      &none    &kp EQUAL     &kp N0                   &none
+       &none                    &none                 &none                      &none                   &none    &kp DLLR   &kp N1                &kp N2                  &kp N3              &kp UNDER
+       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &kp PRCNT  &hrm_r LEFT_SHIFT N4  &hrm_r LEFT_CONTROL N5  &hrm_r LEFT_ALT N6  &hrm_r LEFT_GUI DOT
+&none  &none                    &none                 &none                      &none                   &none    &none      &kp N7                &kp N8                  &kp N9              &kp COMMA            &none
+                                                      &none                      &none                   &none    &kp EQUAL  &kp N0                &none
             >;
         };
 
@@ -218,10 +218,10 @@
 
         shortcuts {
             bindings = <
-       &none          &none          &none          &none          &none    &none  &none  &none  &none  &none
-       &kp LG(N1)     &kp LG(N2)     &kp LG(N3)     &kp LG(N4)     &none    &none  &none  &none  &none  &none
-&none  &kp LG(N5)     &kp LG(N6)     &kp LG(N7)     &kp LG(N8)     &none    &none  &none  &none  &none  &none  &none
-                                     &none          &none          &none    &none  &none  &none
+       &none       &none       &none       &none       &none    &none  &none  &none  &none  &none
+       &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &none    &none  &none  &none  &none  &none
+&none  &kp LG(N5)  &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &none    &none  &none  &none  &none  &none  &none
+                               &none       &none       &none    &none  &none  &none
             >;
         };
 
