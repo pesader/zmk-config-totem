@@ -138,21 +138,21 @@
         txt_assignment: txt_assignment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_SPACE &kp PT_EQUAL &kp PT_SPACE>;
+            bindings = <&kp SPACE &kp EQUAL &kp SPACE>;
             label = "TXT_ASSIGNMENT";
         };
 
         txt_equals: txt_equals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_SPACE &kp PT_EQUAL &kp PT_EQUAL &kp PT_SPACE>;
+            bindings = <&kp SPACE &kp EQUAL &kp EQUAL &kp SPACE>;
             label = "TXT_EQUALS";
         };
 
         txt_nequals: txt_nequals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_SPACE &kp PT_EXCL &kp PT_EQUAL &kp PT_SPACE>;
+            bindings = <&kp SPACE &kp EXCL &kp EQUAL &kp SPACE>;
             label = "TXT_NEQUALS";
         };
     };
@@ -176,16 +176,16 @@
 
         base {
             bindings = <
-                &kp PT_Q        &kp PT_W            &kp PT_E         &kp PT_R              &kp PT_T     &kp PT_Y     &kp PT_U              &kp PT_I                &kp PT_O            &kp PT_P
-                &hrm LGUI PT_A  &hrm LEFT_ALT PT_S  &hrm LCTRL PT_D  &hrm LEFT_SHIFT PT_F  &kp PT_G     &kp PT_H     &hrm LEFT_SHIFT PT_J  &hrm LEFT_CONTROL PT_K  &hrm LEFT_ALT PT_L  &hrm LGUI PT_SEMI
-&sk LEFT_SHIFT  &kp PT_Z        &kp PT_X            &kp PT_C         &kp PT_V              &kp PT_B     &kp PT_N     &kp PT_M              &kp PT_COMMA            &kp PT_DOT          &kp PT_FSLH        &sl 7
-                                                    &lt 5 ESC        &lt 1 PT_SPACE        &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE       &lt 6 DELETE
+                &kp Q        &kp W            &kp E         &kp R              &kp T        &kp Y        &kp U              &kp I                &kp O            &kp P
+                &hrm LGUI A  &hrm LEFT_ALT S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G        &kp H        &hrm LEFT_SHIFT J  &hrm LEFT_CONTROL K  &hrm LEFT_ALT L  &hrm LGUI PT_SEMI
+&sk LEFT_SHIFT  &kp Z        &kp X            &kp C         &kp V              &kp B        &kp N        &kp M              &kp COMMA            &kp DOT          &kp PT_FSLH        &sl 7
+                                                    &lt 5 ESC        &lt 1 SPACE        &lt 3 TAB    &lt 4 ENTER  &lt 2 BACKSPACE       &lt 6 DELETE
             >;
         };
 
         navigation {
             bindings = <
-                &none               &none                  &none                        &none                &none    &os_focus_notification  &kp LC(PT_MINUS)      &kp LC(LS(PT_EQUAL))  &kp LC(PT_EQUAL)     &kp LC(PT_N0)
+                &none               &none                  &none                        &none                &none    &os_focus_notification  &kp LC(MINUS)         &kp LC(LS(EQUAL))     &kp LC(EQUAL)        &kp LC(N0)
                 &hrm LEFT_GUI HOME  &hrm LEFT_ALT PAGE_UP  &hrm LEFT_CONTROL PAGE_DOWN  &hrm LEFT_SHIFT END  &none    &kp LEFT_ARROW          &hrm LEFT_SHIFT DOWN  &hrm LEFT_CONTROL UP  &hrm LEFT_ALT RIGHT  &hrm LEFT_GUI PRINTSCREEN
 &studio_unlock  &none               &none                  &none                        &none                &none    &kp CAPSLOCK            &kp F2                &kp F6                &kp F7               &kp F11                    &os_end_session
                                                            &none                        &none                &none    &none                   &kp K_MENU            &os_lock_screen
@@ -194,19 +194,19 @@
 
         symbols {
             bindings = <
-            &kp PT_PIPE            &kp PT_DLLR           &kp PT_LBRC                &kp PT_RBRC              &txt_assignment    &none  &none                     &none                       &none                  &none
-            &hrm LEFT_GUI PT_AMPS  &hrm LEFT_ALT PT_DQT  &hrm LEFT_CONTROL PT_LPAR  &hrm LEFT_SHIFT PT_RPAR  &kp PT_EXCL        &none  &hrm LEFT_SHIFT PT_EQUAL  &hrm LEFT_CONTROL PT_PRCNT  &hrm LEFT_ALT PT_HASH  &hrm LEFT_GUI PT_STAR
-&caps_word  &kp PT_AT              &kp PT_PLUS           &kp PT_LBKT                &kp PT_RBKT              &kp PT_BSLH        &none  &none                     &none                       &none                  &none                  &none
-                                                         &kp PT_GRAVE               &kp PT_UNDER             &kp PT_MINUS       &none  &none                     &none
+            &kp PT_PIPE            &kp DLLR              &kp PT_LBRC                &kp PT_RBRC              &txt_assignment    &none  &none                     &none                       &none                  &none
+            &hrm LEFT_GUI AMPS     &hrm LEFT_ALT PT_DQT  &hrm LEFT_CONTROL LPAR     &hrm LEFT_SHIFT RPAR     &kp EXCL           &none  &hrm LEFT_SHIFT EQUAL     &hrm LEFT_CONTROL PRCNT     &hrm LEFT_ALT HASH     &hrm LEFT_GUI STAR
+&caps_word  &kp AT                 &kp PLUS              &kp PT_LBKT                &kp PT_RBKT              &kp PT_BSLH        &none  &none                     &none                       &none                  &none                  &none
+                                                         &kp PT_GRAVE               &kp UNDER                &kp MINUS          &none  &none                     &none
             >;
         };
 
         numbers {
             bindings = <
-       &none                  &none                  &none                       &none                    &none    &kp PT_DLLR   &kp PT_N1              &kp PT_N2                &kp PT_N3            &kp PT_UNDER
-       &hrm LEFT_GUI PT_FSLH  &hrm LEFT_ALT PT_STAR  &hrm LEFT_CONTROL PT_MINUS  &hrm LEFT_SHIFT PT_PLUS  &none    &kp PT_PRCNT  &hrm LEFT_SHIFT PT_N4  &hrm LEFT_CONTROL PT_N5  &hrm LEFT_ALT PT_N6  &hrm LEFT_GUI PT_DOT
-&none  &none                  &none                  &none                       &none                    &none    &none         &kp PT_N7              &kp PT_N8                &kp PT_N9            &kp PT_COMMA          &none
-                                                     &none                       &none                    &none    &kp PT_EQUAL  &kp PT_N0              &none
+       &none                  &none                  &none                       &none                    &none    &kp DLLR      &kp N1                 &kp N2                   &kp N3               &kp UNDER
+       &hrm LEFT_GUI PT_FSLH  &hrm LEFT_ALT STAR     &hrm LEFT_CONTROL MINUS     &hrm LEFT_SHIFT PLUS     &none    &kp PRCNT     &hrm LEFT_SHIFT N4     &hrm LEFT_CONTROL N5     &hrm LEFT_ALT N6     &hrm LEFT_GUI DOT
+&none  &none                  &none                  &none                       &none                    &none    &none         &kp N7                 &kp N8                   &kp N9               &kp COMMA             &none
+                                                     &none                       &none                    &none    &kp EQUAL     &kp N0                 &none
             >;
         };
 
@@ -231,8 +231,8 @@
         shortcuts {
             bindings = <
        &none          &none          &none          &none          &none    &none  &none  &none  &none  &none
-       &kp LG(PT_N1)  &kp LG(PT_N2)  &kp LG(PT_N3)  &kp LG(PT_N4)  &none    &none  &none  &none  &none  &none
-&none  &kp LG(PT_N5)  &kp LG(PT_N6)  &kp LG(PT_N7)  &kp LG(PT_N8)  &none    &none  &none  &none  &none  &none  &none
+       &kp LG(N1)     &kp LG(N2)     &kp LG(N3)     &kp LG(N4)     &none    &none  &none  &none  &none  &none
+&none  &kp LG(N5)     &kp LG(N6)     &kp LG(N7)     &kp LG(N8)     &none    &none  &none  &none  &none  &none  &none
                                      &none          &none          &none    &none  &none  &none
             >;
         };
