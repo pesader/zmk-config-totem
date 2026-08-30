@@ -37,6 +37,15 @@
             require-prior-idle-ms = <50>;
             flavor = "balanced";
         };
+
+        shift_bspc_del: shift_bspc_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_BSPC_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
