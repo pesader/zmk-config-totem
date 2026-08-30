@@ -150,12 +150,12 @@
 
         left_super {
             bindings = <&kp LGUI>;
-            key-positions = <12 13>;
+            key-positions = <13 24>;
         };
 
         right_esc {
             bindings = <&kp ESC>;
-            key-positions = <16 17>;
+            key-positions = <16 27>;
         };
     };
 
@@ -167,7 +167,7 @@
        &kp Q          &kp W              &kp E           &kp R                &kp T        &kp Y        &kp U                &kp I                  &kp O              &kp P
        &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &kp G        &kp H        &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
 &sl 7  &kp Z          &kp X              &kp C           &kp V                &kp B        &kp N        &kp M                &kp COMMA              &kp DOT            &kp PT_FSLH          &none
-                                                  &lt 5 ESC       &lt 1 PT_SPACE       &lt 3 TAB    &lt 4 ENTER  &lt_bspc_r 6 0       &sk LEFT_SHIFT
+                                         &lt 5 ESC       &lt 1 PT_SPACE       &lt 3 TAB    &lt 4 ENTER  &lt_bspc_r 5 0       &sk LEFT_SHIFT
             >;
         };
 
