@@ -162,12 +162,12 @@
 
         left_super {
             bindings = <&kp LGUI>;
-            key-positions = <13 24>;
+            key-positions = <13 12>;
         };
 
         right_esc {
             bindings = <&kp ESC>;
-            key-positions = <16 27>;
+            key-positions = <16 17>;
         };
     };
 
